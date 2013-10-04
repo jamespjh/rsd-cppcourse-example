@@ -13,3 +13,4 @@ const std::string & reactor::Species::GetName() const
 	return name; // give the name variable result back
 }
 
+// Some change
