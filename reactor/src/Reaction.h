@@ -16,7 +16,7 @@ namespace reactor{
   {   
   public:
     Reaction(RateConstant rate); // Declare constructor function.
-    RateConstant GetRate() const;
+    RateConstant GetRate() const; // Const because it doesn't change the rate
 
     void AddReactant( Species *  species){reactants.push_back(species);}
     void AddProduct( Species  * species){products.push_back(species);}
@@ -32,7 +32,7 @@ namespace reactor{
     double GetFlux() const ; 
   private:
 
-    RateConstant rate; // A member variable for the class to store the name of the system.
+    RateConstant rate; // A member variable for the class to store the reaction rate
     std::vector< Species * > reactants;
     std::vector< Species * > products;
   };

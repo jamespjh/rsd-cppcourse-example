@@ -1,16 +1,14 @@
 #include "Reaction.h" // Include the declaration of the Reaction..
 
 reactor::Reaction::Reaction(RateConstant rate):
-    rate(rate), reactants(), products() // Initialise the name member variable from the input argument.
+    rate(rate), reactants(), products()
   {
     // do nothing
   }
 
-reactor::RateConstant reactor::Reaction::GetRate() const
+reactor::RateConstant reactor::Reaction::GetRate() const // const because it doesn't change the rate
 { 
-	// a function whose return type is a standard string, with no input arguments
-	// the ampersand and const will be explained later.
-	return rate; // give the name variable result back
+	return rate; // give the rate result back
 }
 
 void reactor::Reaction::ContributeToRatesOfChange() const 
